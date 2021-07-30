@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap");
+* {
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+html{
+font-family: 'Roboto', sans-serif;
+font-size:10px;
+}
+body{
+display:flex;
+justify-content: center;
+align-items: center;
+margin: 100px;
+}
+.postcard__img{
+position:relative;
+transform: translateX(-30px);
+
+}
+.postcard__img img{
+width:320px;
+height:300px;
+object-fit:cover;
+display:block;
+border-radius: 6px;
+box-shadow:5px 3px 10px rgb(116, 41, 41);
+
+}
+.postcard__img::before{
+border-radius: 10px;
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+left:0;
+top:0;
+background: linear-gradient(to right, rgba(79,172,254,.8),rgba(0,242,254,.8));
+}
+.postcard{
+align-items:center;
+background-color: #ffffff;
+display:flex;
+padding:10px;
+border-radius: 10px;
+box-shadow: 2px 3px 10px #000;
+max-width:800px;
+height:400px;
+}
+
+.postcard__info{
+margin:0 20px;
+}
+.postcard__date{
+display: block;
+font-size:14px;
+font-weight:600;
+color:rgba(0,0,0,0.5);
+margin:4px 0;
+}
+.postcard__title{
+margin:18px 0 26px;
+font-size:26px;
+text-transform:uppercase;
+color:#4facfe;
+}
+.postcard__text{
+margin-bottom:30px;
+font-size: 14px;
+color:rgba(0,0,0,0.7);
+}
+
+.postcard__cta{
+display:inline-block;
+padding: 14px 20px;
+letter-spacing:1px;
+text-decoration:none;
+font-size:16px;
+color:#fff;
+background-image:linear-gradient(to right, rgba(79,172,254,.8),rgba(0,242,254,.8));
+border-radius: 14px;
+text-transform:uppercase;
+}
+.postcard__cta:hover{
+background-image:linear-gradient(to right,rgba(0,242,254,.8), rgba(79,172,254,.8));  
+}
+@media screen and (max-width:868px){
+.postcard{
+padding-top:0px;
+max-width:1120px;
+}
+
+
+@media screen and (max-width:768px){
+.postcard{
+flex-direction:column;
+padding:25px;
+height:auto;
+
+}
+.postcard__img{
+transform:translate(0, -60px);    }
+}   
+.postcard__img img{
+min-width:400px;
+}
+
+
